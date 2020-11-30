@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>User successfully registered!</h1>
+  <?php
+$host="jdbc:mysql://localhost:3306/"; 
+$dbName="studentinfo"; 
+$dbUser="root"; 
+$dbPass="1230"; 
+
+$dbh = new PDO( "sqlsrv:server=".$host."; Database=".$dbName, $dbUser, $dbPass); 
+$dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION ); 
+$sql = "SELECT * FROM studentinfo.studentregistration"; 
+?>
+
+<table>
+<thead>
+    <tr>
+    <td>id</td>
+    <td>name</td>
+    <td>grade</td>
+    <td>address</td>
+    <td>subject</td>
+    <td>gpa</td>
+    </tr>
+</thead>
+<tbody>
+
+<?php
+    foreach ($dbh->query($sql) as $rows){
+    ?>
+    <tr>
+        <td><?php echo intval($rows['id'])?></td>
+        <td><?php echo $rows['name']?></td>
+        <td><?php echo $rows['grade']?></td>
+        <td><?php echo $rows['address']?></td>     
+        <td><?php echo $rows['subject']?></td>
+        <td><?php echo $rows['gpa']?></td>
+    </tr>
+ <?php
+  }
+ ?>
+ </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light style="background-color:#e3f2fd;">
+		<a class="navbar-brand" href="#"
+			style="text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; color: white">School
+			Management Tools </a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="#">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+				<li class="nav-item"><a class="nav-link" href="index.jsp">link</a></li>
+				<li class="nav-item"><a class="nav-link" href="#"> <!-- Button trigger modal -->Blog
+				</a></li>
+			</ul>
+			<button type="button" class="btn btn-primary" data-toggle="modal"
+				data-target="#exampleModal">Login or Register</button>
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+				aria-labelledby="exampleModalLabel" aria-hidden="true"
+				style="padding: 35px; margin-top: 80px; background-color: black">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content"
+						style="background-color: black; color: white; text-alignment: center; padding: 20px; margin: 40px; border: 2px solid red; border-radius: 25px;">
+						<div class="modal-header">
+							<h3 class="modal-title" id="exampleModalLabel"
+								style="text-shadow: 2px 2px blue">School Management Tools</h3>
+						</div>
+						<form action="./InsertData" method="post">
+							<p>Roll NO:</p>
+							<!-- Create an element with mandatory name attribute, 
+        so that data can be transfer to the servlet using getParameter() -->
+							<input type="text" name="id" /> <br />
+							<p>Full Name:</p>
+							<input type="text" name="name" /> <br />
+							<br />
+							
+							<p>Grade:</p>
+							<input type="text" name="grade" /> <br />
+							<p>Address:</p>
+							<input type="text" name="address" /> <br />
+							<p>Fav. Subject:</p>
+							<input type="text" name="subject" /> <br />
+							<p>GPA:</p>
+							<input type="text" name="gpa" /> <br />
+						
+							<br /> <input type="submit" />
+						</form>
+						<hr>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-4">School Management Tools</h1>
+			<p class="lead">Where you can manage your school smoothly...</p>
+			<a href="#" class="badge badge-primary">Primary</a> <a href="#"
+				class="badge badge-secondary">Secondary</a> <a href="#"
+				class="badge badge-success">Success</a> <a href="#"
+				class="badge badge-danger">Danger</a> <a href="#"
+				class="badge badge-warning">Warning</a> <a href="#"
+				class="badge badge-info">Info</a> <a href="#"
+				class="badge badge-light">Light</a> <a href="#"
+				class="badge badge-dark">Dark</a>
+				
+		</div>
+		<hr>
+		<img src="images/school.jpg" class="img-responsive" alt="school"
+			width="100%" height="500">
+
+	</div>
+</body>
+</html>
